@@ -53,3 +53,76 @@
       border-radius: 5px;
       cursor: pointer;
     }
+    .lang-toggle button:hover {
+      background-color: #004d40;
+    }
+    .th, .en {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">Global Weight Loss Methods | วิธีลดน้ำหนักทั่วโลก</h1>
+  </header>
+  <div class="lang-toggle">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('th')">ภาษาไทย</button>
+  </div>
+  <main>
+
+    <section>
+      <h2 class="en">🍽️ Intermittent Fasting</h2>
+      <h2 class="th">🍽️ การอดอาหารเป็นช่วงเวลา</h2>
+      <p class="en">The 16:8 method is the most popular IF format: fast for 16 hours, eat during 8. Benefits include reduced insulin levels, increased growth hormone, and better fat burning. IF is best combined with healthy, whole food intake.</p>
+      <p class="th">รูปแบบ IF ที่นิยมที่สุดคือ 16:8 คืออดอาหาร 16 ชั่วโมง กินในช่วง 8 ชั่วโมง เช่น กิน 12.00-20.00 น. งานวิจัยพบว่าช่วยลดน้ำตาลในเลือด เพิ่มฮอร์โมนการเจริญเติบโต และเผาผลาญไขมันได้ดีขึ้น</p>
+      <img src="images/if.png" alt="Intermittent Fasting">
+    </section>
+
+    <section>
+      <h2 class="en">🥗 Mediterranean Diet</h2>
+      <h2 class="th">🥗 อาหารเมดิเตอร์เรเนียน</h2>
+      <p class="en">Rich in fruits, vegetables, legumes, fish, olive oil, and whole grains. Low in processed foods and sugar. It has been shown to reduce risk of heart disease and help long-term weight control.</p>
+      <p class="th">เน้นการกินผัก ผลไม้ ธัญพืชเต็มเมล็ด ปลา น้ำมันมะกอก ลดอาหารแปรรูปและน้ำตาล ช่วยลดความเสี่ยงโรคหัวใจ และควบคุมน้ำหนักได้ในระยะยาว</p>
+      <img src="images/mediterranean.png" alt="Mediterranean Diet">
+    </section>
+
+    <section>
+      <h2 class="en">⏰ Best Eating Time</h2>
+      <h2 class="th">⏰ เวลากินที่ดีที่สุด</h2>
+      <p class="en">Research shows that consuming calories earlier in the day improves metabolism and prevents weight gain. Avoid eating after 8 PM as the body is less active and insulin sensitivity drops.</p>
+      <p class="th">งานวิจัยแนะนำให้ทานอาหารมื้อหลักในช่วงเช้าและกลางวัน เพื่อประสิทธิภาพการเผาผลาญที่ดี หลีกเลี่ยงการกินหลัง 2 ทุ่มเพราะร่างกายเริ่มพัก และระบบอินซูลินลดลง</p>
+      <img src="images/eating_time.png" alt="Best Time to Eat">
+    </section>
+
+    <section>
+      <h2 class="en">💧 Water Intake</h2>
+      <h2 class="th">💧 การดื่มน้ำ</h2>
+      <p class="en">Drinking water 30 minutes before meals helps reduce appetite and calorie intake. Stay hydrated throughout the day to support metabolism and digestion.</p>
+      <p class="th">การดื่มน้ำก่อนมื้ออาหารประมาณ 30 นาที ช่วยลดความหิวและการบริโภคแคลอรี่ ดื่มน้ำอย่างสม่ำเสมอช่วยให้ระบบเผาผลาญและการย่อยอาหารทำงานดีขึ้น</p>
+      <img src="images/water.png" alt="Drinking Water">
+    </section>
+
+    <section>
+      <h2 class="en">🏃‍♀️ Daily Exercise</h2>
+      <h2 class="th">🏃‍♀️ การออกกำลังกายประจำวัน</h2>
+      <p class="en">Regular exercise, such as walking, stretching, or strength training, boosts metabolism, improves mood, and helps manage weight. Aim for at least 30 minutes daily.</p>
+      <p class="th">การเดิน ยืดกล้ามเนื้อ หรือเล่นเวทเทรนนิ่งวันละ 30 นาที ช่วยเพิ่มการเผาผลาญ ควบคุมน้ำหนัก และเพิ่มอารมณ์ให้ดีขึ้น</p>
+      <img src="images/exercise.png" alt="Daily Exercise">
+    </section>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? 'block' : 'none');
+      document.querySelectorAll('.th').forEach(el => el.style.display = lang === 'th' ? 'block' : 'none');
+    }
+    setLang('th'); // default language
+  </script>
+</body>
+</html>
